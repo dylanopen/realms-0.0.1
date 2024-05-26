@@ -8,7 +8,7 @@ This is a 'mid-level' crate which provides an extremely simple API to easily dra
 
 First, create a new project with `cargo new <project_name>`.
 
-Next, import Realms into your Rust project by adding the following line to your **Cargo.toml**:
+Next, import Realms into your Rust project by adding the following line to your **Cargo.toml**, under `[dependencies]`:
 
 ``` toml
 realms = "VERSION_NUMBER"
