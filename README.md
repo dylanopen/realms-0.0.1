@@ -59,7 +59,7 @@ Running this code using `cargo run` will give you this result:
 
 Congratulations! You have successfully written your first Realms game :\)
 
-> Note: For more info, please see the full explanation at [github.com/dylanopen/realms](https://github.com/dylanopen/realms/)
+> Note: For more info, please see the full explanation at [github.com/dylanopen/realms](https://github.com/dylanopen/realms/tree/master/docs/examples/1-TheWindow.md)
 
 ## Example: Shapes and events
 
@@ -113,10 +113,12 @@ fn main()
 
 Run the program and you should see an orange rectangle follow the cursor!
 
+> Note: For more info, please see the full explanation at [github.com/dylanopen/realms](https://github.com/dylanopen/realms/tree/master/docs/examples/2-ShapesAndEvents.md)
+
 ## Documentation
 
 The above examples are just a very brief introduction to the Realms library.
 
-Please view [the documentation on GitHub](https://github.com/dylanopen/realms-rs/tree/main/docs). There is also some information available at [docs.rs](https://docs.rs/realms), although documentation there is limited.
+Please view [the documentation on GitHub](https://github.com/dylanopen/realms-rs/tree/master/docs). There is also some information available at [docs.rs](https://docs.rs/realms), although documentation there is limited.
 
 Thank you for choosing Realms to build your next great game!
