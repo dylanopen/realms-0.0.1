@@ -1,0 +1,11 @@
+[package]
+name = "realms"
+version = "0.1.0"
+edition = "2021"
+license = "GPLv3-or-later"
+description = "A powerful and lightweight graphics library for making Rust games"
+
+[dependencies.sdl2]
+version = "0.36.0"
+features = ["image"]
+
