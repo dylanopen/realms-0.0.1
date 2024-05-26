@@ -31,25 +31,25 @@ use realms::Colour;
 
 fn main()
 {
-	let mut window = Window::new("My Amazing Game", 800, 450).unwrap();  // Create a new `Window`. For now, we won't worry about error handling.
-	let fill_colour = Colour::from_rgb(0, 100, 255);  // Stores the background colour of the window.
-	let mut running = true;  // Keep looping until this is `false`.
+  let mut window = Window::new("My Amazing Game", 800, 450).unwrap();  // Create a new `Window`. For now, we won't worry about error handling.
+  let fill_colour = Colour::from_rgb(0, 100, 255);  // Stores the background colour of the window.
+  let mut running = true;  // Keep looping until this is `false`.
 
-	while running
-	{
-		window.fill(fill_colour.clone()).unwrap();  // Copy the fill_colour so we can use it again on the next iteration.
-		for event in window.get_events()
-		{
-			match event
-			{
-				Event::Quit => {
-					running = false;  // Stop the loop if the user closes the program.
-				},
-				_ => {  }  // Default, do nothing if the event doesn't match.
-			}
-		}
-		window.draw();  // Draw the frame.
-	}
+  while running
+  {
+    window.fill(fill_colour.clone()).unwrap();  // Copy the fill_colour so we can use it again on the next iteration.
+    for event in window.get_events()
+    {
+      match event
+      {
+        Event::Quit => {
+          running = false;  // Stop the loop if the user closes the program.
+        },
+        _ => {  }  // Default, do nothing if the event doesn't match.
+      }
+    }
+    window.draw();  // Draw the frame.
+  }
 }
 ```
 
@@ -77,37 +77,37 @@ use realms::Colour;
 
 fn main()
 {
-	let mut window = Window::new("Shapes and events", 800, 600).unwrap();
-	let mut running = true;
+  let mut window = Window::new("Shapes and events", 800, 600).unwrap();
+  let mut running = true;
 
-	let mut mouse_x = 400;  // Rectangle starting position.
-	let mut mouse_y = 600;  // Must be mutable so we can update it.
-	
-	while running
-	{
-		window.fill(Colour::from_rgb(255, 255, 255)).unwrap();  // white
-		for event in window.get_events()
-		{
-			match event
-			{
-				Event::Quit => {
-					running = false;
-				},
-				Event::MouseMotion(event) => {
-					mouse_x = event.x;  // Update mouse position.
-					mouse_y = event.y;  // `event` is a MouseMotionEvent struct: it also holds the current mouse position.
-				},
-				_ => {  }
-			}
-		}
-		let rect = Rect::new(
-			mouse_x-16, mouse_y-16,  // The coordinates represent the top-left of the rect. Subtracting 16 ensures the rectangle's centre is at the mouse position.
-			32, 32,
-			Colour::from_rgb(255, 100, 0)  // orange
-		);
-		rect.draw(&mut window).unwrap();  // Draw the rectangle to the window. Realms uses `object.draw(&mut window)` notation.
-		window.draw();
-	}
+  let mut mouse_x = 400;  // Rectangle starting position.
+  let mut mouse_y = 600;  // Must be mutable so we can update it.
+  
+  while running
+  {
+    window.fill(Colour::from_rgb(255, 255, 255)).unwrap();  // white
+    for event in window.get_events()
+    {
+      match event
+      {
+        Event::Quit => {
+          running = false;
+        },
+        Event::MouseMotion(event) => {
+          mouse_x = event.x;  // Update mouse position.
+          mouse_y = event.y;  // `event` is a MouseMotionEvent struct: it also holds the current mouse position.
+        },
+        _ => {  }
+      }
+    }
+    let rect = Rect::new(
+      mouse_x-16, mouse_y-16,  // The coordinates represent the top-left of the rect. Subtracting 16 ensures the rectangle's centre is at the mouse position.
+      32, 32,
+      Colour::from_rgb(255, 100, 0)  // orange
+    );
+    rect.draw(&mut window).unwrap();  // Draw the rectangle to the window. Realms uses `object.draw(&mut window)` notation.
+    window.draw();
+  }
 }
 ```
 
